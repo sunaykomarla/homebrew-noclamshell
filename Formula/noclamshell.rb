@@ -1,7 +1,7 @@
 class Noclamshell < Formula
   desc "Sleep despite annoying clamshell mode"
   homepage "https://github.com/pirj/noclamshell"
-  url "https://github.com/pirj/noclamshell.git", tag: "1.3", revision: "b194200d470f89106ad2b40d0c1e33b34b33a0ca"
+  url "https://github.com/pirj/noclamshell.git", tag: "1.3", revision: "df2b07dddd47a259d6306dfbb012f9f31b3df761"
   head "https://github.com/pirj/noclamshell.git", branch: "master"
 
   def install
