@@ -7,7 +7,7 @@
 To install the [latest release][noclamshell-releases]:
 
 ```shell
-$ brew install pirj/homebrew-noclamshell/noclamshell
+$ brew install pirj/noclamshell/noclamshell
 ```
 
 To upgrade a previously-installed version:
