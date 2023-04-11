@@ -8,25 +8,11 @@ class Noclamshell < Formula
     bin.install "noclamshell"
   end
 
-  plist_options manual: "noclamshell"
-
-  def plist; <<~XML
-    <?xml version="1.0" encoding="UTF-8"?>
-    <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
-    <plist version="1.0">
-      <dict>
-        <key>Label</key><string>#{plist_name}</string>
-        <key>ThrottleInterval</key> <integer>2</integer>
-        <key>KeepAlive</key> <true/>
-        <key>ProgramArguments</key>
-          <array>
-            <string>bash</string>
-            <string>-c</string>
-            <string>#{opt_bin}/noclamshell</string>
-          </array>
-      </dict>
-    </plist>
-    XML
+  service do
+    run opt_bin/"noclamshell"
+    keep_alive true
+    run_type :interval
+    interval 1
   end
 
   test do
